@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b0814" />
+  <title>Valorant Performance Lab</title>
+  <meta name="description" content="Dashboard unificado de performance Valorant com dados do Tracker.gg e VLR.gg." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="bg-orb orb-a"></div>
+  <div class="bg-orb orb-b"></div>
+  <div class="bg-grid"></div>
+
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Valorant Performance Lab">
+        <span class="brand-mark">V</span>
+        <span><b>PERFORMANCE</b><small>LAB</small></span>
+      </a>
+
+      <nav class="source-switch" aria-label="Fonte dos dados">
+        <button class="source-btn active" data-source="tracker">
+          <span class="source-dot"></span>Tracker
+        </button>
+        <button class="source-btn" data-source="vlr">
+          <span class="source-dot"></span>VLR
+        </button>
+      </nav>
+
+      <div class="top-actions">
+        <div class="sync-pill" id="syncPill"><i></i><span>Sincronizado</span><small id="lastSync">--:--</small></div>
+        <button class="icon-btn" id="refreshBtn" title="Recarregar dados">↻</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="trackerSection" class="source-section active">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">TRACKER.GG · COMPETITIVE</p>
+            <h1>Performance por conta.</h1>
+            <p class="lede">Três perfis, a mesma season, com ranking conservador de agentes e leitura do map pool.</p>
+          </div>
+          <div class="season-card">
+            <span>SEASON ID</span>
+            <strong>8102cd81</strong>
+            <small>43a0-d0d7-bd59-47b8fe9bed1b</small>
+          </div>
+        </div>
+
+        <div class="account-tabs" id="accountTabs"></div>
+
+        <div class="profile-strip" id="trackerProfileStrip">
+          <div>
+            <span class="label">CONTA ATIVA</span>
+            <h2 id="trackerPlayer">—</h2>
+            <p id="trackerStatusText">Carregando dados...</p>
+          </div>
+          <div class="profile-actions">
+            <a id="trackerProfileLink" class="ghost-link" target="_blank" rel="noopener">Abrir no Tracker ↗</a>
+            <div class="updated-box"><span>ATUALIZADO</span><b id="trackerUpdated">—</b></div>
+          </div>
+        </div>
+
+        <nav class="subnav" id="trackerSubnav">
+          <button class="active" data-tracker-view="overview">Visão geral</button>
+          <button data-tracker-view="agents">Agentes</button>
+          <button data-tracker-view="maps">Mapas</button>
+        </nav>
+
+        <div id="trackerContent"></div>
+      </section>
+
+      <section id="vlrSection" class="source-section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">VLR.GG · COMPETITIVE CAREER</p>
+            <h1>Histórico competitivo.</h1>
+            <p class="lede">Stats de partidas, earnings, colocações, campeonatos e histórico de times dos perfis do VLR.</p>
+          </div>
+          <div class="season-card compact">
+            <span>PLAYER</span>
+            <strong id="vlrPlayer">thommy</strong>
+            <small id="vlrUpdated">base local</small>
+          </div>
+        </div>
+
+        <div class="account-tabs" id="vlrPlayerTabs"></div>
+
+        <div class="profile-strip vlr-profile-strip">
+          <div>
+            <span class="label">PERFIL VLR</span>
+            <h2 id="vlrProfileName">—</h2>
+            <p id="vlrProfileMeta">Carregando carreira...</p>
+          </div>
+          <div class="profile-actions">
+            <a id="vlrProfileLink" class="ghost-link" target="_blank" rel="noopener">Abrir no VLR ↗</a>
+            <div class="updated-box"><span>ATUALIZADO</span><b id="vlrUpdatedMirror">auto</b></div>
+          </div>
+        </div>
+
+        <nav class="subnav" id="vlrSubnav">
+          <button class="active" data-vlr-view="career">Carreira</button>
+          <button data-vlr-view="maps">Mapas</button>
+          <button data-vlr-view="agents">Agentes</button>
+          <button data-vlr-view="top">Top 5</button>
+          <button data-vlr-view="data">Partidas</button>
+        </nav>
+
+        <div id="vlrContent"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div><b>VALORANT PERFORMANCE LAB</b><span>Tracker + VLR em um único dashboard</span></div>
+      <p>Os arquivos são recarregados automaticamente a cada 300000 ms.</p>
+    </footer>
+  </div>
+
+  <dialog id="mapDialog" class="modal">
+    <div class="modal-head">
+      <div><span class="eyebrow">HISTÓRICO DO MAPA</span><h3 id="modalTitle">Mapa</h3><p id="modalSubtitle"></p></div>
+      <button id="modalClose" class="icon-btn">×</button>
+    </div>
+    <div class="table-wrap" id="modalBody"></div>
+  </dialog>
+
+  <script src="assets/app.js" defer></script>
+</body>
+</html>

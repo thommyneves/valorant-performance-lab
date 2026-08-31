@@ -1,0 +1,30 @@
+{
+  "season_id": "8102cd81-43a0-d0d7-bd59-47b8fe9bed1b",
+  "updated_at": "2026-08-31T14:24:04-03:00",
+  "accounts": [
+    {
+      "slug": "elsewhere",
+      "riot_id": "elsewhere#999t",
+      "label": "elsewhere",
+      "data_file": "tracker/elsewhere.json",
+      "profile_url": "",
+      "status": "ready"
+    },
+    {
+      "slug": "dead-eyes",
+      "riot_id": "dead eyes#999t",
+      "label": "dead eyes",
+      "data_file": "tracker/dead-eyes.json",
+      "profile_url": "",
+      "status": "ready"
+    },
+    {
+      "slug": "taylorswiftfan13",
+      "riot_id": "taylorswiftfan13#lari",
+      "label": "taylorswiftfan13",
+      "data_file": "tracker/taylorswiftfan13.json",
+      "profile_url": "",
+      "status": "ready"
+    }
+  ]
+}

@@ -1,0 +1,326 @@
+{
+  "metadata": {
+    "jogador": "dead eyes#999t",
+    "season_id": "8102cd81-43a0-d0d7-bd59-47b8fe9bed1b",
+    "gerado_em": "2026-08-31T14:23:47-03:00",
+    "quantidade_agentes": 5,
+    "quantidade_mapas": 5
+  },
+  "metodologia": {
+    "objetivo": "Comparar desempenho sem deixar amostras pequenas dominarem o ranking por causa de resultados extremos.",
+    "agentes": {
+      "tecnica": "regressao a media + normalizacao z + score ponderado",
+      "forca_da_media_em_partidas": 10.0,
+      "minimo_partidas_top_5": 5,
+      "pesos": {
+        "win_rate": 0.35,
+        "kd": 0.25,
+        "adr": 0.15,
+        "acs": 0.15,
+        "kast": 0.1
+      }
+    },
+    "mapas": {
+      "tecnica": "limite inferior de Wilson para win rate + regressao a media + score ponderado",
+      "pesos": {
+        "win_rate": 0.55,
+        "kd": 0.2,
+        "adr": 0.1,
+        "acs": 0.1,
+        "dd_delta": 0.05
+      }
+    },
+    "limitacao_agente_por_mapa": "Top Agents nao informa a quantidade de partidas de cada agente em cada mapa. A chance por mapa e uma estimativa conservadora, nao uma probabilidade causal ou garantia de resultado."
+  },
+  "agentes": {
+    "top_5": [],
+    "ranking_completo": [
+      {
+        "nome": "Viper",
+        "funcao": "Controller",
+        "partidas": 1,
+        "confianca": "muito_baixa",
+        "stats_reais": {
+          "win_rate": 100.0,
+          "kd": 1.78,
+          "adr": 203.2,
+          "acs": 284.1,
+          "kast": 100.0
+        },
+        "stats_ajustados": {
+          "win_rate": 69.7,
+          "kd": 1.24,
+          "adr": 151.32,
+          "acs": 230.48,
+          "kast": 77.52
+        },
+        "fator_confiabilidade": 0.3015,
+        "elegivel_top_5": false,
+        "score": 100.0,
+        "analise": "Destaques ajustados acima da media: taxa de vitoria, K/D, ADR. Amostra muito pequena; resultados extremos foram fortemente penalizados.",
+        "posicao_ranking_completo": 1
+      },
+      {
+        "nome": "Chamber",
+        "funcao": "Sentinel",
+        "partidas": 1,
+        "confianca": "muito_baixa",
+        "stats_reais": {
+          "win_rate": 100.0,
+          "kd": 1.4,
+          "adr": 150.9,
+          "acs": 258.5,
+          "kast": 69.6
+        },
+        "stats_ajustados": {
+          "win_rate": 69.7,
+          "kd": 1.2,
+          "adr": 146.57,
+          "acs": 228.15,
+          "kast": 74.75
+        },
+        "fator_confiabilidade": 0.3015,
+        "elegivel_top_5": false,
+        "score": 65.43,
+        "analise": "Destaques ajustados acima da media: taxa de vitoria. Amostra muito pequena; resultados extremos foram fortemente penalizados.",
+        "posicao_ranking_completo": 2
+      },
+      {
+        "nome": "Jett",
+        "funcao": "Duelist",
+        "partidas": 1,
+        "confianca": "muito_baixa",
+        "stats_reais": {
+          "win_rate": 100.0,
+          "kd": 1.09,
+          "adr": 129.1,
+          "acs": 224.3,
+          "kast": 76.7
+        },
+        "stats_ajustados": {
+          "win_rate": 69.7,
+          "kd": 1.18,
+          "adr": 144.58,
+          "acs": 225.04,
+          "kast": 75.4
+        },
+        "fator_confiabilidade": 0.3015,
+        "elegivel_top_5": false,
+        "score": 52.01,
+        "analise": "Destaques ajustados acima da media: taxa de vitoria. Amostra muito pequena; resultados extremos foram fortemente penalizados.",
+        "posicao_ranking_completo": 3
+      },
+      {
+        "nome": "Cypher",
+        "funcao": "Sentinel",
+        "partidas": 2,
+        "confianca": "muito_baixa",
+        "stats_reais": {
+          "win_rate": 0.0,
+          "kd": 1.27,
+          "adr": 161.7,
+          "acs": 240.9,
+          "kast": 71.4
+        },
+        "stats_ajustados": {
+          "win_rate": 55.56,
+          "kd": 1.2,
+          "adr": 148.73,
+          "acs": 227.75,
+          "kast": 74.62
+        },
+        "fator_confiabilidade": 0.4082,
+        "elegivel_top_5": false,
+        "score": 11.49,
+        "analise": "Depois do ajuste de amostra, nao possui stat claramente acima da media. Amostra muito pequena; resultados extremos foram fortemente penalizados.",
+        "posicao_ranking_completo": 4
+      },
+      {
+        "nome": "Clove",
+        "funcao": "Controller",
+        "partidas": 1,
+        "confianca": "muito_baixa",
+        "stats_reais": {
+          "win_rate": 100.0,
+          "kd": 0.3,
+          "adr": 70.2,
+          "acs": 102.0,
+          "kast": 62.5
+        },
+        "stats_ajustados": {
+          "win_rate": 69.7,
+          "kd": 1.1,
+          "adr": 139.23,
+          "acs": 213.92,
+          "kast": 74.11
+        },
+        "fator_confiabilidade": 0.3015,
+        "elegivel_top_5": false,
+        "score": 0.0,
+        "analise": "Destaques ajustados acima da media: taxa de vitoria. Amostra muito pequena; resultados extremos foram fortemente penalizados.",
+        "posicao_ranking_completo": 5
+      }
+    ],
+    "criterio_top_5": {
+      "minimo_partidas": 5,
+      "motivo": "Agentes abaixo do minimo permanecem no ranking completo, mas nao entram no Top 5 por insuficiencia de amostra."
+    },
+    "medias_gerais": {
+      "win_rate": 66.67,
+      "kd": 1.19,
+      "adr": 146.13,
+      "acs": 225.12,
+      "kast": 75.27
+    }
+  },
+  "mapas": {
+    "ranking": [
+      {
+        "mapa": "Summit",
+        "partidas": 1,
+        "vitorias": 1,
+        "derrotas": 0,
+        "win_rate_real": 100.0,
+        "win_rate_conservador": 26.98,
+        "confianca": "muito_baixa",
+        "stats_ajustados": {
+          "win_rate": 63.64,
+          "kd": 1.17,
+          "adr": 145.37,
+          "acs": 229.63,
+          "dd_delta": 15.45,
+          "win_rate_conservador": 26.98
+        },
+        "melhor_agente_estimado": {
+          "agente": "Chamber",
+          "chance_estimada": 100.0,
+          "taxa_exibida_tracker": 100.0,
+          "confianca": "muito_baixa",
+          "outros_candidatos": [],
+          "nota": "Estimativa conservadora. O arquivo do Tracker nao informa quantas partidas cada agente jogou especificamente neste mapa; a confianca usa uma amostra-proxy limitada pelas partidas globais do agente."
+        },
+        "score": 100.0,
+        "posicao": 1
+      },
+      {
+        "mapa": "Sunset",
+        "partidas": 1,
+        "vitorias": 1,
+        "derrotas": 0,
+        "win_rate_real": 100.0,
+        "win_rate_conservador": 26.98,
+        "confianca": "muito_baixa",
+        "stats_ajustados": {
+          "win_rate": 63.64,
+          "kd": 1.14,
+          "adr": 143.39,
+          "acs": 226.52,
+          "dd_delta": 11.73,
+          "win_rate_conservador": 26.98
+        },
+        "melhor_agente_estimado": {
+          "agente": "Jett",
+          "chance_estimada": 100.0,
+          "taxa_exibida_tracker": 100.0,
+          "confianca": "muito_baixa",
+          "outros_candidatos": [],
+          "nota": "Estimativa conservadora. O arquivo do Tracker nao informa quantas partidas cada agente jogou especificamente neste mapa; a confianca usa uma amostra-proxy limitada pelas partidas globais do agente."
+        },
+        "score": 70.57,
+        "posicao": 2
+      },
+      {
+        "mapa": "Split",
+        "partidas": 2,
+        "vitorias": 2,
+        "derrotas": 0,
+        "win_rate_real": 100.0,
+        "win_rate_conservador": 42.5,
+        "confianca": "muito_baixa",
+        "stats_ajustados": {
+          "win_rate": 66.67,
+          "kd": 1.07,
+          "adr": 141.25,
+          "acs": 218.08,
+          "dd_delta": 8.0,
+          "win_rate_conservador": 42.5
+        },
+        "melhor_agente_estimado": {
+          "agente": "Clove",
+          "chance_estimada": 100.0,
+          "taxa_exibida_tracker": 100.0,
+          "confianca": "muito_baixa",
+          "outros_candidatos": [
+            {
+              "agente": "Viper",
+              "chance_estimada": 100.0,
+              "taxa_exibida_tracker": 100.0
+            }
+          ],
+          "nota": "Estimativa conservadora. O arquivo do Tracker nao informa quantas partidas cada agente jogou especificamente neste mapa; a confianca usa uma amostra-proxy limitada pelas partidas globais do agente."
+        },
+        "score": 55.44,
+        "posicao": 3
+      },
+      {
+        "mapa": "Abyss",
+        "partidas": 1,
+        "vitorias": 0,
+        "derrotas": 1,
+        "win_rate_real": 0.0,
+        "win_rate_conservador": 0.0,
+        "confianca": "muito_baixa",
+        "stats_ajustados": {
+          "win_rate": 54.55,
+          "kd": 1.17,
+          "adr": 148.26,
+          "acs": 231.97,
+          "dd_delta": 17.55,
+          "win_rate_conservador": 0.0
+        },
+        "melhor_agente_estimado": {
+          "agente": "Cypher",
+          "chance_estimada": 0.0,
+          "taxa_exibida_tracker": 0.0,
+          "confianca": "muito_baixa",
+          "outros_candidatos": [],
+          "nota": "Estimativa conservadora. O arquivo do Tracker nao informa quantas partidas cada agente jogou especificamente neste mapa; a confianca usa uma amostra-proxy limitada pelas partidas globais do agente."
+        },
+        "score": 47.01,
+        "posicao": 4
+      },
+      {
+        "mapa": "Haven",
+        "partidas": 1,
+        "vitorias": 0,
+        "derrotas": 1,
+        "win_rate_real": 0.0,
+        "win_rate_conservador": 0.0,
+        "confianca": "muito_baixa",
+        "stats_ajustados": {
+          "win_rate": 54.55,
+          "kd": 1.14,
+          "adr": 144.2,
+          "acs": 223.56,
+          "dd_delta": 14.55,
+          "win_rate_conservador": 0.0
+        },
+        "melhor_agente_estimado": {
+          "agente": "Cypher",
+          "chance_estimada": 0.0,
+          "taxa_exibida_tracker": 0.0,
+          "confianca": "muito_baixa",
+          "outros_candidatos": [],
+          "nota": "Estimativa conservadora. O arquivo do Tracker nao informa quantas partidas cada agente jogou especificamente neste mapa; a confianca usa uma amostra-proxy limitada pelas partidas globais do agente."
+        },
+        "score": 0.0,
+        "posicao": 5
+      }
+    ]
+  },
+  "resumo": {
+    "melhor_agente_geral": null,
+    "melhor_mapa": "Summit",
+    "pior_mapa": "Haven"
+  }
+}

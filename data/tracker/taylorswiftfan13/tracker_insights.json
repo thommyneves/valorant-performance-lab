@@ -1,0 +1,607 @@
+{
+  "metadata": {
+    "jogador": "taylorswiftfan13#lari",
+    "season_id": "8102cd81-43a0-d0d7-bd59-47b8fe9bed1b",
+    "gerado_em": "2026-08-31T14:24:04-03:00",
+    "quantidade_agentes": 9,
+    "quantidade_mapas": 7
+  },
+  "metodologia": {
+    "objetivo": "Comparar desempenho sem deixar amostras pequenas dominarem o ranking por causa de resultados extremos.",
+    "agentes": {
+      "tecnica": "regressao a media + normalizacao z + score ponderado",
+      "forca_da_media_em_partidas": 10.0,
+      "minimo_partidas_top_5": 5,
+      "pesos": {
+        "win_rate": 0.35,
+        "kd": 0.25,
+        "adr": 0.15,
+        "acs": 0.15,
+        "kast": 0.1
+      }
+    },
+    "mapas": {
+      "tecnica": "limite inferior de Wilson para win rate + regressao a media + score ponderado",
+      "pesos": {
+        "win_rate": 0.55,
+        "kd": 0.2,
+        "adr": 0.1,
+        "acs": 0.1,
+        "dd_delta": 0.05
+      }
+    },
+    "limitacao_agente_por_mapa": "Top Agents nao informa a quantidade de partidas de cada agente em cada mapa. A chance por mapa e uma estimativa conservadora, nao uma probabilidade causal ou garantia de resultado."
+  },
+  "agentes": {
+    "top_5": [
+      {
+        "nome": "Chamber",
+        "funcao": "Sentinel",
+        "partidas": 8,
+        "confianca": "baixa",
+        "stats_reais": {
+          "win_rate": 37.5,
+          "kd": 1.2,
+          "adr": 157.9,
+          "acs": 244.1,
+          "kast": 70.7
+        },
+        "stats_ajustados": {
+          "win_rate": 34.68,
+          "kd": 1.06,
+          "adr": 150.67,
+          "acs": 227.24,
+          "kast": 70.33
+        },
+        "fator_confiabilidade": 0.6667,
+        "elegivel_top_5": true,
+        "score": 100.0,
+        "analise": "Destaques ajustados acima da media: taxa de vitoria, K/D, ADR, ACS. Amostra pequena; a nota foi puxada para a media geral.",
+        "posicao_ranking_completo": 1,
+        "posicao": 1
+      },
+      {
+        "nome": "Clove",
+        "funcao": "Controller",
+        "partidas": 5,
+        "confianca": "baixa",
+        "stats_reais": {
+          "win_rate": 40.0,
+          "kd": 1.07,
+          "adr": 166.4,
+          "acs": 254.3,
+          "kast": 76.8
+        },
+        "stats_ajustados": {
+          "win_rate": 34.95,
+          "kd": 0.98,
+          "adr": 152.06,
+          "acs": 227.27,
+          "kast": 72.29
+        },
+        "fator_confiabilidade": 0.5774,
+        "elegivel_top_5": true,
+        "score": 87.54,
+        "analise": "Destaques ajustados acima da media: taxa de vitoria, K/D, ADR, ACS, KAST. Amostra pequena; a nota foi puxada para a media geral.",
+        "posicao_ranking_completo": 2,
+        "posicao": 2
+      },
+      {
+        "nome": "Sova",
+        "funcao": "Initiator",
+        "partidas": 5,
+        "confianca": "baixa",
+        "stats_reais": {
+          "win_rate": 40.0,
+          "kd": 0.93,
+          "adr": 126.5,
+          "acs": 181.7,
+          "kast": 73.8
+        },
+        "stats_ajustados": {
+          "win_rate": 34.95,
+          "kd": 0.94,
+          "adr": 138.76,
+          "acs": 203.07,
+          "kast": 71.29
+        },
+        "fator_confiabilidade": 0.5774,
+        "elegivel_top_5": true,
+        "score": 41.09,
+        "analise": "Destaques ajustados acima da media: taxa de vitoria. Amostra pequena; a nota foi puxada para a media geral.",
+        "posicao_ranking_completo": 3,
+        "posicao": 3
+      },
+      {
+        "nome": "Phoenix",
+        "funcao": "Duelist",
+        "partidas": 9,
+        "confianca": "baixa",
+        "stats_reais": {
+          "win_rate": 33.3,
+          "kd": 0.8,
+          "adr": 143.7,
+          "acs": 204.0,
+          "kast": 68.4
+        },
+        "stats_ajustados": {
+          "win_rate": 32.84,
+          "kd": 0.87,
+          "adr": 144.33,
+          "acs": 209.13,
+          "kast": 69.26
+        },
+        "fator_confiabilidade": 0.6882,
+        "elegivel_top_5": true,
+        "score": 17.22,
+        "analise": "Depois do ajuste de amostra, nao possui stat claramente acima da media. Amostra pequena; a nota foi puxada para a media geral.",
+        "posicao_ranking_completo": 7,
+        "posicao": 4
+      }
+    ],
+    "ranking_completo": [
+      {
+        "nome": "Chamber",
+        "funcao": "Sentinel",
+        "partidas": 8,
+        "confianca": "baixa",
+        "stats_reais": {
+          "win_rate": 37.5,
+          "kd": 1.2,
+          "adr": 157.9,
+          "acs": 244.1,
+          "kast": 70.7
+        },
+        "stats_ajustados": {
+          "win_rate": 34.68,
+          "kd": 1.06,
+          "adr": 150.67,
+          "acs": 227.24,
+          "kast": 70.33
+        },
+        "fator_confiabilidade": 0.6667,
+        "elegivel_top_5": true,
+        "score": 100.0,
+        "analise": "Destaques ajustados acima da media: taxa de vitoria, K/D, ADR, ACS. Amostra pequena; a nota foi puxada para a media geral.",
+        "posicao_ranking_completo": 1
+      },
+      {
+        "nome": "Clove",
+        "funcao": "Controller",
+        "partidas": 5,
+        "confianca": "baixa",
+        "stats_reais": {
+          "win_rate": 40.0,
+          "kd": 1.07,
+          "adr": 166.4,
+          "acs": 254.3,
+          "kast": 76.8
+        },
+        "stats_ajustados": {
+          "win_rate": 34.95,
+          "kd": 0.98,
+          "adr": 152.06,
+          "acs": 227.27,
+          "kast": 72.29
+        },
+        "fator_confiabilidade": 0.5774,
+        "elegivel_top_5": true,
+        "score": 87.54,
+        "analise": "Destaques ajustados acima da media: taxa de vitoria, K/D, ADR, ACS, KAST. Amostra pequena; a nota foi puxada para a media geral.",
+        "posicao_ranking_completo": 2
+      },
+      {
+        "nome": "Sova",
+        "funcao": "Initiator",
+        "partidas": 5,
+        "confianca": "baixa",
+        "stats_reais": {
+          "win_rate": 40.0,
+          "kd": 0.93,
+          "adr": 126.5,
+          "acs": 181.7,
+          "kast": 73.8
+        },
+        "stats_ajustados": {
+          "win_rate": 34.95,
+          "kd": 0.94,
+          "adr": 138.76,
+          "acs": 203.07,
+          "kast": 71.29
+        },
+        "fator_confiabilidade": 0.5774,
+        "elegivel_top_5": true,
+        "score": 41.09,
+        "analise": "Destaques ajustados acima da media: taxa de vitoria. Amostra pequena; a nota foi puxada para a media geral.",
+        "posicao_ranking_completo": 3
+      },
+      {
+        "nome": "Jett",
+        "funcao": "Duelist",
+        "partidas": 1,
+        "confianca": "muito_baixa",
+        "stats_reais": {
+          "win_rate": 0.0,
+          "kd": 1.11,
+          "adr": 173.4,
+          "acs": 252.4,
+          "kast": 75.0
+        },
+        "stats_ajustados": {
+          "win_rate": 29.47,
+          "kd": 0.96,
+          "adr": 147.49,
+          "acs": 217.26,
+          "kast": 70.49
+        },
+        "fator_confiabilidade": 0.3015,
+        "elegivel_top_5": false,
+        "score": 31.35,
+        "analise": "Depois do ajuste de amostra, nao possui stat claramente acima da media. Amostra muito pequena; resultados extremos foram fortemente penalizados.",
+        "posicao_ranking_completo": 4
+      },
+      {
+        "nome": "Iso",
+        "funcao": "Duelist",
+        "partidas": 1,
+        "confianca": "muito_baixa",
+        "stats_reais": {
+          "win_rate": 0.0,
+          "kd": 0.89,
+          "adr": 166.1,
+          "acs": 265.3,
+          "kast": 61.1
+        },
+        "stats_ajustados": {
+          "win_rate": 29.47,
+          "kd": 0.94,
+          "adr": 146.82,
+          "acs": 218.44,
+          "kast": 69.23
+        },
+        "fator_confiabilidade": 0.3015,
+        "elegivel_top_5": false,
+        "score": 26.98,
+        "analise": "Depois do ajuste de amostra, nao possui stat claramente acima da media. Amostra muito pequena; resultados extremos foram fortemente penalizados.",
+        "posicao_ranking_completo": 5
+      },
+      {
+        "nome": "Vyse",
+        "funcao": "Sentinel",
+        "partidas": 1,
+        "confianca": "muito_baixa",
+        "stats_reais": {
+          "win_rate": 0.0,
+          "kd": 0.75,
+          "adr": 138.7,
+          "acs": 197.2,
+          "kast": 68.4
+        },
+        "stats_ajustados": {
+          "win_rate": 29.47,
+          "kd": 0.92,
+          "adr": 144.33,
+          "acs": 212.25,
+          "kast": 69.89
+        },
+        "fator_confiabilidade": 0.3015,
+        "elegivel_top_5": false,
+        "score": 23.0,
+        "analise": "Depois do ajuste de amostra, nao possui stat claramente acima da media. Amostra muito pequena; resultados extremos foram fortemente penalizados.",
+        "posicao_ranking_completo": 6
+      },
+      {
+        "nome": "Phoenix",
+        "funcao": "Duelist",
+        "partidas": 9,
+        "confianca": "baixa",
+        "stats_reais": {
+          "win_rate": 33.3,
+          "kd": 0.8,
+          "adr": 143.7,
+          "acs": 204.0,
+          "kast": 68.4
+        },
+        "stats_ajustados": {
+          "win_rate": 32.84,
+          "kd": 0.87,
+          "adr": 144.33,
+          "acs": 209.13,
+          "kast": 69.26
+        },
+        "fator_confiabilidade": 0.6882,
+        "elegivel_top_5": true,
+        "score": 17.22,
+        "analise": "Depois do ajuste de amostra, nao possui stat claramente acima da media. Amostra pequena; a nota foi puxada para a media geral.",
+        "posicao_ranking_completo": 7
+      },
+      {
+        "nome": "Skye",
+        "funcao": "Initiator",
+        "partidas": 3,
+        "confianca": "muito_baixa",
+        "stats_reais": {
+          "win_rate": 33.3,
+          "kd": 0.68,
+          "adr": 125.7,
+          "acs": 168.1,
+          "kast": 62.5
+        },
+        "stats_ajustados": {
+          "win_rate": 32.62,
+          "kd": 0.88,
+          "adr": 140.47,
+          "acs": 203.22,
+          "kast": 68.3
+        },
+        "fator_confiabilidade": 0.4804,
+        "elegivel_top_5": false,
+        "score": 11.91,
+        "analise": "Depois do ajuste de amostra, nao possui stat claramente acima da media. Amostra muito pequena; resultados extremos foram fortemente penalizados.",
+        "posicao_ranking_completo": 8
+      },
+      {
+        "nome": "Sage",
+        "funcao": "Sentinel",
+        "partidas": 4,
+        "confianca": "muito_baixa",
+        "stats_reais": {
+          "win_rate": 25.0,
+          "kd": 0.81,
+          "adr": 121.2,
+          "acs": 180.2,
+          "kast": 66.3
+        },
+        "stats_ajustados": {
+          "win_rate": 30.3,
+          "kd": 0.9,
+          "adr": 138.12,
+          "acs": 204.17,
+          "kast": 68.97
+        },
+        "fator_confiabilidade": 0.5345,
+        "elegivel_top_5": false,
+        "score": 0.0,
+        "analise": "Depois do ajuste de amostra, nao possui stat claramente acima da media. Amostra muito pequena; resultados extremos foram fortemente penalizados.",
+        "posicao_ranking_completo": 9
+      }
+    ],
+    "criterio_top_5": {
+      "minimo_partidas": 5,
+      "motivo": "Agentes abaixo do minimo permanecem no ranking completo, mas nao entram no Top 5 por insuficiencia de amostra."
+    },
+    "medias_gerais": {
+      "win_rate": 32.42,
+      "kd": 0.94,
+      "adr": 144.89,
+      "acs": 213.75,
+      "kast": 70.04
+    }
+  },
+  "mapas": {
+    "ranking": [
+      {
+        "mapa": "Ascent",
+        "partidas": 3,
+        "vitorias": 2,
+        "derrotas": 1,
+        "win_rate_real": 66.7,
+        "win_rate_conservador": 25.35,
+        "confianca": "muito_baixa",
+        "stats_ajustados": {
+          "win_rate": 40.94,
+          "kd": 0.98,
+          "adr": 153.71,
+          "acs": 224.33,
+          "dd_delta": 6.37,
+          "win_rate_conservador": 25.35
+        },
+        "melhor_agente_estimado": {
+          "agente": "Phoenix",
+          "chance_estimada": 77.8,
+          "taxa_exibida_tracker": 100.0,
+          "confianca": "muito_baixa",
+          "outros_candidatos": [],
+          "nota": "Estimativa conservadora. O arquivo do Tracker nao informa quantas partidas cada agente jogou especificamente neste mapa; a confianca usa uma amostra-proxy limitada pelas partidas globais do agente."
+        },
+        "score": 100.0,
+        "posicao": 1
+      },
+      {
+        "mapa": "Split",
+        "partidas": 7,
+        "vitorias": 3,
+        "derrotas": 4,
+        "win_rate_real": 42.9,
+        "win_rate_conservador": 18.64,
+        "confianca": "baixa",
+        "stats_ajustados": {
+          "win_rate": 37.2,
+          "kd": 0.98,
+          "adr": 150.0,
+          "acs": 220.84,
+          "dd_delta": 4.64,
+          "win_rate_conservador": 18.64
+        },
+        "melhor_agente_estimado": {
+          "agente": "Skye",
+          "chance_estimada": 39.6,
+          "taxa_exibida_tracker": 33.0,
+          "confianca": "muito_baixa",
+          "outros_candidatos": [],
+          "nota": "Estimativa conservadora. O arquivo do Tracker nao informa quantas partidas cada agente jogou especificamente neste mapa; a confianca usa uma amostra-proxy limitada pelas partidas globais do agente."
+        },
+        "score": 79.2,
+        "posicao": 2
+      },
+      {
+        "mapa": "Sunset",
+        "partidas": 5,
+        "vitorias": 2,
+        "derrotas": 3,
+        "win_rate_real": 40.0,
+        "win_rate_conservador": 14.27,
+        "confianca": "baixa",
+        "stats_ajustados": {
+          "win_rate": 35.48,
+          "kd": 0.99,
+          "adr": 148.12,
+          "acs": 217.94,
+          "dd_delta": 6.86,
+          "win_rate_conservador": 14.27
+        },
+        "melhor_agente_estimado": {
+          "agente": "Phoenix",
+          "chance_estimada": 44.55,
+          "taxa_exibida_tracker": 50.0,
+          "confianca": "baixa",
+          "outros_candidatos": [],
+          "nota": "Estimativa conservadora. O arquivo do Tracker nao informa quantas partidas cada agente jogou especificamente neste mapa; a confianca usa uma amostra-proxy limitada pelas partidas globais do agente."
+        },
+        "score": 68.13,
+        "posicao": 3
+      },
+      {
+        "mapa": "Summit",
+        "partidas": 5,
+        "vitorias": 2,
+        "derrotas": 3,
+        "win_rate_real": 40.0,
+        "win_rate_conservador": 14.27,
+        "confianca": "baixa",
+        "stats_ajustados": {
+          "win_rate": 35.48,
+          "kd": 0.96,
+          "adr": 146.52,
+          "acs": 216.07,
+          "dd_delta": 0.52,
+          "win_rate_conservador": 14.27
+        },
+        "melhor_agente_estimado": {
+          "agente": "Sage",
+          "chance_estimada": 44.0,
+          "taxa_exibida_tracker": 50.0,
+          "confianca": "muito_baixa",
+          "outros_candidatos": [],
+          "nota": "Estimativa conservadora. O arquivo do Tracker nao informa quantas partidas cada agente jogou especificamente neste mapa; a confianca usa uma amostra-proxy limitada pelas partidas globais do agente."
+        },
+        "score": 56.12,
+        "posicao": 4
+      },
+      {
+        "mapa": "Haven",
+        "partidas": 7,
+        "vitorias": 2,
+        "derrotas": 5,
+        "win_rate_real": 28.6,
+        "win_rate_conservador": 9.96,
+        "confianca": "baixa",
+        "stats_ajustados": {
+          "win_rate": 31.31,
+          "kd": 0.93,
+          "adr": 147.73,
+          "acs": 218.82,
+          "dd_delta": -0.3,
+          "win_rate_conservador": 9.96
+        },
+        "melhor_agente_estimado": {
+          "agente": "Sova",
+          "chance_estimada": 38.33,
+          "taxa_exibida_tracker": 50.0,
+          "confianca": "baixa",
+          "outros_candidatos": [
+            {
+              "agente": "Clove",
+              "chance_estimada": 15.6,
+              "taxa_exibida_tracker": 0.0
+            },
+            {
+              "agente": "Phoenix",
+              "chance_estimada": 13.2,
+              "taxa_exibida_tracker": 0.0
+            }
+          ],
+          "nota": "Estimativa conservadora. O arquivo do Tracker nao informa quantas partidas cada agente jogou especificamente neste mapa; a confianca usa uma amostra-proxy limitada pelas partidas globais do agente."
+        },
+        "score": 43.17,
+        "posicao": 5
+      },
+      {
+        "mapa": "Lotus",
+        "partidas": 3,
+        "vitorias": 0,
+        "derrotas": 3,
+        "win_rate_real": 0.0,
+        "win_rate_conservador": 0.0,
+        "confianca": "muito_baixa",
+        "stats_ajustados": {
+          "win_rate": 25.55,
+          "kd": 0.98,
+          "adr": 147.43,
+          "acs": 218.56,
+          "dd_delta": 1.76,
+          "win_rate_conservador": 0.0
+        },
+        "melhor_agente_estimado": {
+          "agente": "Chamber",
+          "chance_estimada": 0.0,
+          "taxa_exibida_tracker": 0.0,
+          "confianca": "muito_baixa",
+          "outros_candidatos": [
+            {
+              "agente": "Sage",
+              "chance_estimada": 0.0,
+              "taxa_exibida_tracker": 0.0
+            },
+            {
+              "agente": "Clove",
+              "chance_estimada": 0.0,
+              "taxa_exibida_tracker": 0.0
+            }
+          ],
+          "nota": "Estimativa conservadora. O arquivo do Tracker nao informa quantas partidas cada agente jogou especificamente neste mapa; a confianca usa uma amostra-proxy limitada pelas partidas globais do agente."
+        },
+        "score": 29.69,
+        "posicao": 6
+      },
+      {
+        "mapa": "Abyss",
+        "partidas": 7,
+        "vitorias": 1,
+        "derrotas": 6,
+        "win_rate_real": 14.3,
+        "win_rate_conservador": 3.25,
+        "confianca": "baixa",
+        "stats_ajustados": {
+          "win_rate": 25.43,
+          "kd": 0.9,
+          "adr": 137.23,
+          "acs": 203.22,
+          "dd_delta": -7.3,
+          "win_rate_conservador": 3.25
+        },
+        "melhor_agente_estimado": {
+          "agente": "Sova",
+          "chance_estimada": 30.53,
+          "taxa_exibida_tracker": 50.0,
+          "confianca": "baixa",
+          "outros_candidatos": [
+            {
+              "agente": "Chamber",
+              "chance_estimada": 6.6,
+              "taxa_exibida_tracker": 0.0
+            }
+          ],
+          "nota": "Estimativa conservadora. O arquivo do Tracker nao informa quantas partidas cada agente jogou especificamente neste mapa; a confianca usa uma amostra-proxy limitada pelas partidas globais do agente."
+        },
+        "score": 0.0,
+        "posicao": 7
+      }
+    ]
+  },
+  "resumo": {
+    "melhor_agente_geral": "Chamber",
+    "melhor_mapa": "Ascent",
+    "pior_mapa": "Abyss"
+  }
+}

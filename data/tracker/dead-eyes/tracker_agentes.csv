@@ -1,0 +1,6 @@
+﻿Tipo,Agent,Funcao,Time Played,Matches,Win %,K/D,ADR,ACS,DDΔ,HS%,KAST,Kills,Deaths,Assists,Attack W/L,Attack Win %,Attack K/D,Defense W/L,Defense Win %,Defense K/D
+Agente,Cypher,Sentinel,1.2 hrs,2,0,1.27,161.7,240.9,+37,27.5,71.4,42,33,9,14 - 10,58.3,1.77,8 - 17,32.0,0.95
+Agente,Jett,Duelist,0.7 hrs,1,100,1.09,129.1,224.3,-11,48.8,76.7,24,22,1,5 - 10,33.3,0.93,11 - 4,73.3,1.43
+Agente,Chamber,Sentinel,0.5 hrs,1,100,1.4,150.9,258.5,+30,39.4,69.6,21,15,2,5 - 7,41.7,0.67,8 - 3,72.7,2.5
+Agente,Clove,Controller,0.5 hrs,1,100,0.3,70.2,102.0,-100,28.0,62.5,7,23,4,7 - 5,58.3,0.1,6 - 6,50.0,0.46
+Agente,Viper,Controller,0.3 hrs,1,100,1.78,203.2,284.1,+95,31.1,100.0,16,9,6,2 - 2,50.0,1.67,11 - 1,91.7,1.83

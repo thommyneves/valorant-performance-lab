@@ -1,0 +1,88 @@
+name: Atualizar dados e publicar site unificado
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  atualizar-e-publicar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependências
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: Atualizar os dois perfis VLR
+        run: python scripts/atualizar_vlr.py
+
+      - name: Atualizar as três contas do Tracker
+        env:
+          CI: "false"
+        run: xvfb-run --auto-servernum python scripts/atualizar_tracker.py
+
+      - name: Preparar arquivos públicos
+        run: python scripts/preparar_site.py
+
+      - name: Verificar site
+        run: |
+          test -f site/index.html
+          test -f site/data/vlr.json
+          test -f site/data/vlr/thommy.json
+          test -f site/data/vlr/fracarissa.json
+          test -f site/data/vlr_players.json
+          test -f site/data/tracker/elsewhere.json
+          test -f site/data/tracker/dead-eyes.json
+          test -f site/data/tracker/taylorswiftfan13.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          season = "8102cd81-43a0-d0d7-bd59-47b8fe9bed1b"
+          manifest = json.loads(Path("site/data/tracker_accounts.json").read_text(encoding="utf-8"))
+          assert manifest["season_id"] == season
+          assert len(manifest["accounts"]) == 3
+          vlr_manifest = json.loads(Path("site/data/vlr_players.json").read_text(encoding="utf-8"))
+          assert {p["player_id"] for p in vlr_manifest["players"]} == {"51239", "45269"}
+          print("Site validado com 3 contas Tracker, 2 perfis VLR e season nova.")
+          PY
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Enviar site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Publicar
+        id: deployment
+        uses: actions/deploy-pages@v4

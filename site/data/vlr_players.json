@@ -1,0 +1,23 @@
+{
+  "updated_at": "2026-08-31T14:24:04-03:00",
+  "players": [
+    {
+      "slug": "thommy",
+      "player_id": "51239",
+      "player_slug": "thommy",
+      "label": "thommy",
+      "data_file": "vlr/thommy.json",
+      "profile_url": "https://www.vlr.gg/player/51239/thommy/?timespan=all",
+      "status": "ready"
+    },
+    {
+      "slug": "fracarissa",
+      "player_id": "45269",
+      "player_slug": "fracarissa",
+      "label": "fracarissa",
+      "data_file": "vlr/fracarissa.json",
+      "profile_url": "https://www.vlr.gg/player/45269/fracarissa/?timespan=all",
+      "status": "ready"
+    }
+  ]
+}
